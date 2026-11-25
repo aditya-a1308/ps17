@@ -36,7 +36,7 @@ pipeline {
             }
         }
         stage('Smoke Test') {
-            steps { sh 'sleep 5; curl -f http://<DEPLOY_EC2_PUBLIC_IP> | grep -i "version"' }
+            steps { sh 'sleep 5; curl -f http://15.252.137.210 | grep -i "version"' }
         }
     }
     post {

@@ -2,9 +2,9 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CREDS = credentials('dockerhub-creds')     // Username+Password credential
-        IMAGE_NAME      = "yourdockerhubuser/cicd-flask-app"
+        IMAGE_NAME      = "adityaa1308/cicd-flask-app"
         IMAGE_TAG       = "${BUILD_NUMBER}"
-        EC2_HOST        = "ec2-user@<DEPLOY_EC2_PUBLIC_IP>"
+        EC2_HOST        = "ec2-user@15.252.137.210"
     }
     stages {
         stage('Checkout') {
